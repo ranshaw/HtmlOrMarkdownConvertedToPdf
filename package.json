@@ -1,0 +1,21 @@
+{
+  "name": "create-pdf",
+  "version": "1.0.0",
+  "description": "通过爬虫抓取网页地址，然后生成pdf文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodeJS",
+    "percollate"
+  ],
+  "author": "ranshaw",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "markdown-pdf": "^9.0.0",
+    "percollate": "^0.3.0",
+    "request": "^2.88.0"
+  }
+}
