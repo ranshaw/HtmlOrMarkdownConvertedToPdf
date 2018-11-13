@@ -25,7 +25,7 @@ const getEs6Course = () => {
   const { url, name, wrapEle, getUrlList, pageApi } = es6Course;
 
   getHtml(pageApi).then(res => {
-    // const urlList = getUrlList(res, wrapEle, url);
+    const urlList = getUrlList(res, wrapEle, url);
 
     // 生成的pdf文件中包含markdown代码
     // percollate.configure();
