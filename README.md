@@ -1,4 +1,4 @@
-### PDF
+### PDF文件
 在项目目录pdfs下
 * 阮一峰JavaScript教程
 * 阮一峰ES6教程
