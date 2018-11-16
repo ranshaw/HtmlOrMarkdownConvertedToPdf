@@ -1,7 +1,8 @@
 const $ = require("cheerio");
 // PDF样式
 const baseOpt = {
-  css: "@page { size: 8.2in 14.5in } html { font-size: 18pt }"
+  css: "@page { size: 8.2in 14.5in } html { font-size: 18pt }",  // 华为p10
+  cssIReader: "@page { size: A6 landscape; margin: 14pt } html { font-size: 16pt } ", // iReader T6
 };
 
 // 阮一峰JS教程
@@ -51,11 +52,10 @@ const fe9ReactCourse = {
   url: "https://www.yuque.com/fe9/select/",
   name: "九部知识库之ReactJs.pdf",
   wrapEle: ".typo-catalog-detail",
-  css: "@page { size: A6 landscape; margin: 10pt } html { font-size: 16pt } ",
+  css: baseOpt.cssIReader,
   usePup: true,
   getUrlList(body, ele, url) {
     let urlList = [];
-    // console.log("body--", body);
     const reg = /(?<=decodeURIComponent\()\S+(?=\)\))/g;
     const dataStr = decodeURIComponent(body.match(reg)[0]);
     const data = dataStr.slice(1, dataStr.length - 1);
