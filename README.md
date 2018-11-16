@@ -1,10 +1,8 @@
-### 前言
-
-你想一夜暴富吗？你想一夜成名吗？你想开兰博基尼泡妞吗？你想拿钞票点烟吗？你想成为世界主宰吗？那么，赶紧往下看吧，虽然它不能达成前面所说的任 何一个梦想，但是，你将获得：
-
-1.  通过命令行将某网站的内容转成 PDF 文件
-2.  通过 NodeJS 爬虫将某网络教程（例如阮一峰的 JavaScript 教程和 ES6 教程等）转成 PDF 文件
-3.  通过 NodeJS 或者 VScode 插件将 Markdown 文件转成 PDF 文件
+### PDF文件
+在项目目录pdfs下
+* 阮一峰JavaScript教程
+* 阮一峰ES6教程
+ 
 
 ### 依赖模块
 
@@ -226,10 +224,4 @@ percollate.configure();
 
 关于使用 VScode 将 Markdown 文件转为 PDF 的方法，我这里就不赘述了，参考[markdown-preview-enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/phantomjs) 。
 
-### 写在最后
-
-**本文的所有代码以及生成的 PDF 文件都在下面的地址，后续会更新更多的大佬免费教程的 PDF 文件**
-
-> [点此查看源码，喜欢的 Star 或者 Fork 哟](https://github.com/ranshaw/HtmlOrMarkdownConvertedToPdf)
-
-PS: 书中自有黄金屋，书中自有颜如玉，为了前面提到的梦想，赶紧撸起来！
+ 
