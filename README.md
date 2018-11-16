@@ -2,8 +2,36 @@
 在项目目录pdfs下
 * 阮一峰JavaScript教程
 * 阮一峰ES6教程
- 
+* 九部知识库之ReactJS精选文章
 
+### 添加方法
+更改index.js中的cleanup方法，将
+```
+const content = (await got(encodeURI(decodeURI(url)), {
+				 
+			})).body;
+```
+改为
+```
+let content
+		if(options.usePup) {
+			const browser = await pup.launch();
+			const page = await browser.newPage();
+			await page.goto(url, { waitUntil: "networkidle0" });
+		
+			content = await page.content().then(v => {
+				return v
+			}).catch((err) => {
+				spinner.fail('获取页面内容失败！')
+			});
+			await browser.close();
+		} else {
+			content = (await got(encodeURI(decodeURI(url)), {
+				 
+			})).body;
+		}
+```
+如果网页内容是动态生成的，设置usePup为true即可
 ### 依赖模块
 
 - [cheerio](https://www.npmjs.com/package/cheerio)
