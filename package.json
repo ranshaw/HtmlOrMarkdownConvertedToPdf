@@ -16,6 +16,7 @@
     "cheerio": "^1.0.0-rc.2",
     "markdown-pdf": "^9.0.0",
     "percollate": "^0.3.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "easy-pdf-merge": "^0.2.0"
   }
 }

@@ -1,8 +1,15 @@
 const request = require("./util"),
   percollate = require("percollate"),
   markdownpdf = require("markdown-pdf"),
+  puppeteer = require("puppeteer"),
+  merge = require("easy-pdf-merge"),
   fs = require("fs"),
-  { javaScriptCourse, es6Course, baseOpt } = require("./config");
+  {
+    javaScriptCourse,
+    es6Course,
+    baseOpt,
+    fe9ReactCourse
+  } = require("./config");
 
 const getHtml = url => {
   return request.parseBody(url);
@@ -12,7 +19,7 @@ const getJSCourse = () => {
 
   getHtml(url).then(res => {
     const urlList = getUrlList(res, wrapEle, url);
-
+    urlList.length = 5;
     percollate.configure();
     percollate.pdf(urlList, {
       output: name,
@@ -72,8 +79,26 @@ const getEs6Course = () => {
   });
 };
 
+const getFe9ReactCourse = () => {
+  const { url, name, wrapEle, getUrlList, css, usePup } = fe9ReactCourse;
+  getHtml(url).then(res => {
+    const urlList = getUrlList(res, wrapEle, url);
+    // console.log("urlList", urlList);
+    percollate.configure();
+    percollate.pdf(urlList, {
+      output: name,
+      css,
+      usePup
+    });
+  });
+};
+
 // 阮一峰JS教程
-getJSCourse();
+// getJSCourse();
 
 // 阮一峰ES6教程
 // getEs6Course();
+
+// 九部知识库精选集-react
+getFe9ReactCourse();
+// console.log("puppeteer---", puppeteer);

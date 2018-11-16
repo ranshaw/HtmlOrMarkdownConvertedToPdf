@@ -46,8 +46,32 @@ const es6Course = {
     return urlList;
   }
 };
+// 九部知识库精选集-react
+const fe9ReactCourse = {
+  url: "https://www.yuque.com/fe9/select/",
+  name: "九部知识库之ReactJs.pdf",
+  wrapEle: ".typo-catalog-detail",
+  css: "@page { size: A6 landscape; margin: 10pt } html { font-size: 16pt } ",
+  usePup: true,
+  getUrlList(body, ele, url) {
+    let urlList = [];
+    // console.log("body--", body);
+    const reg = /(?<=decodeURIComponent\()\S+(?=\)\))/g;
+    const dataStr = decodeURIComponent(body.match(reg)[0]);
+    const data = dataStr.slice(1, dataStr.length - 1);
+    const dataJson = JSON.parse(data);
+    dataJson.book.toc.forEach((v, i) => {
+      if (v.type === "DOC") {
+        urlList.push(url + v.url);
+      }
+    });
+
+    return urlList;
+  }
+};
 module.exports = {
   javaScriptCourse,
   es6Course,
-  baseOpt
+  baseOpt,
+  fe9ReactCourse
 };
