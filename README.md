@@ -3,6 +3,7 @@
 * 阮一峰JavaScript教程
 * 阮一峰ES6教程
 * 九部知识库之ReactJS精选文章
+* ReactJs小书
 
 ### 添加方法
 更改index.js中的cleanup方法，将

@@ -8,7 +8,8 @@ const request = require("./util"),
     javaScriptCourse,
     es6Course,
     baseOpt,
-    fe9ReactCourse
+    fe9ReactCourse,
+    reactJsBook
   } = require("./config");
 
 const getHtml = url => {
@@ -93,12 +94,24 @@ const getFe9ReactCourse = () => {
   });
 };
 
-// 阮一峰JS教程
-// getJSCourse();
+const getReactJsBook = () => {
+  const { url, name, getUrlList, css,   } = reactJsBook;
+  const urlList = getUrlList(url);
+    percollate.configure();
+    percollate.pdf(urlList, {
+      output: name,
+      css,
+      toc: true
+    });
+}
 
-// 阮一峰ES6教程
-// getEs6Course();
+const getPdf = {
+  0:getJSCourse,       // 阮一峰JS教程
+  1:getEs6Course,      // 阮一峰ES6教程
+  2:getFe9ReactCourse, // 九部知识库精选集-react
+  3:getReactJsBook,    // ReactJs小书
+}
 
-// 九部知识库精选集-react
-getFe9ReactCourse();
+// 获取pdf
+getPdf[3]()
  

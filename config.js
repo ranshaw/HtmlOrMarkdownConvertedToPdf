@@ -2,7 +2,7 @@ const $ = require("cheerio");
 // PDF样式
 const baseOpt = {
   css: "@page { size: 8.2in 14.5in } html { font-size: 18pt }",  // 华为p10
-  cssIReader: "@page { size: A6 landscape; margin: 14pt } html { font-size: 16pt } ", // iReader T6
+  cssIReader: "@page { size: A6 landscape; margin: 14pt } html { font-size: 14pt } ", // iReader T6
 };
 
 // 阮一峰JS教程
@@ -69,9 +69,25 @@ const fe9ReactCourse = {
     return urlList;
   }
 };
+
+// ReactJs小书
+const reactJsBook = {
+  url: "http://huziketang.mangojuice.top/books/react/lesson",
+  name: "ReactJs小书.pdf",
+  css: baseOpt.cssIReader,
+  // usePup: true,
+  getUrlList(url) {
+    let urlList = [];
+    for(let i = 1; i < 47;i++) {
+      urlList.push(url+i)
+    }
+    return urlList;
+  }
+};
 module.exports = {
   javaScriptCourse,
   es6Course,
   baseOpt,
-  fe9ReactCourse
+  fe9ReactCourse,
+  reactJsBook
 };
