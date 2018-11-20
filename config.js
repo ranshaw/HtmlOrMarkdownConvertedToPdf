@@ -84,10 +84,31 @@ const reactJsBook = {
     return urlList;
   }
 };
+
+// typescript教程
+const typeScriptCourse = {
+  url: "https://ts.xcatliu.com/",
+  pageApi: "https://ts.xcatliu.com/search_index.json",
+  name: "TypeScript入门教程.pdf",
+  wrapEle: ".typo-catalog-detail",
+  css: baseOpt.cssIReader,
+  usePup: true,
+  getUrlList(body, url) {
+    let urlList = [];
+    const bodyJson = JSON.parse(body)
+    Object.keys(bodyJson.store).forEach((v) => {
+      urlList.push(url + v)
+    })
+    return urlList.filter((v) => {
+      return v.includes('html')
+    });
+  }
+};
 module.exports = {
   javaScriptCourse,
   es6Course,
   baseOpt,
   fe9ReactCourse,
-  reactJsBook
+  reactJsBook,
+  typeScriptCourse
 };

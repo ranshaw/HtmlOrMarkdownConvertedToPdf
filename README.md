@@ -4,6 +4,7 @@
 * 阮一峰ES6教程
 * 九部知识库之ReactJS精选文章
 * ReactJs小书
+* TypeScript入门教程
 
 ### 添加方法
 更改node_modules中percollate里面index.js中的cleanup方法，将
