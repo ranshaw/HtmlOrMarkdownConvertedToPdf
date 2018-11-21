@@ -104,11 +104,35 @@ const typeScriptCourse = {
     });
   }
 };
+
+// 七天学会NodeJs
+const nodeJsCourse = {
+  url: "http://nqdeng.github.io/7-days-nodejs/",
+  pageApi: "http://nqdeng.github.io/7-days-nodejs/#1.6",  // 网站有反爬虫措施，如果请求报错，请换其他url
+  name: "七天学会NodeJs.pdf",  
+  wrapEle: "nav ul",  
+  css: baseOpt.cssIReader,
+  usePup: true,  
+  getUrlList(body, ele, url) {
+    let urlList = [];
+    console.log('body---',body);
+    
+    $(body)
+      .find(ele)
+      .find("li a")
+      .each((i, v) => {
+        const path = $(v).attr("href");
+        urlList.push(url + path);
+      });
+    return urlList;
+  }
+}
 module.exports = {
   javaScriptCourse,
   es6Course,
   baseOpt,
   fe9ReactCourse,
   reactJsBook,
-  typeScriptCourse
+  typeScriptCourse,
+  nodeJsCourse
 };
