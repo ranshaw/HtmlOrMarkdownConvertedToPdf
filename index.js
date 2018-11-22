@@ -11,7 +11,8 @@ const request = require("./util"),
     fe9ReactCourse,
     reactJsBook,
     typeScriptCourse,
-    nodeJsCourse
+    nodeJsCourse,
+    interviewReview
   } = require("./config");
 
 const getHtml = url => {
@@ -133,15 +134,31 @@ const getNodeJsCourse = () => {
   });
 }
 
+const getJsReview = () => {
+  const { url, name, wrapEle, getUrlList, css,usePup,pageApi } = interviewReview;
+
+  getHtml(pageApi).then(res => {
+    const urlList = getUrlList(res, wrapEle, url);
+    console.log('urlList',urlList)
+    percollate.configure();
+    percollate.pdf(urlList, {
+      output: name,
+      css,
+      usePup
+    });
+  });
+}
+
 const getPdf = {
   0:getJSCourse,          // 阮一峰JS教程
   1:getEs6Course,         // 阮一峰ES6教程
   2:getFe9ReactCourse,    // 九部知识库精选集-react
   3:getReactJsBook,       // ReactJs小书
   4:getTypeScriptCourse,  // TypeScript入门教程
-  5:getNodeJsCourse       // 七天学会NodeJs
+  5:getNodeJsCourse,      // 七天学会NodeJs
+  6:getJsReview           // 前端JS面试知识点总结
 }
 
 // 获取pdf
-getPdf[5]()
+getPdf[6]()
  

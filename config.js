@@ -127,6 +127,31 @@ const nodeJsCourse = {
     return urlList;
   }
 }
+
+// 前端面试复习知识点集合
+const interviewReview = {
+  url: "https://yuchengkai.cn",
+  pageApi: "https://yuchengkai.cn/docs/zh/frontend/",
+  name: "前端面试复习知识点集合.pdf",  
+  wrapEle: ".sidebar-group-items li",  
+  css: baseOpt.cssIReader,
+  usePup: true,  
+  getUrlList(body, ele, url) {
+    let urlList = [];
+    console.log('body---',body);
+    
+    $(body)
+      .find(ele)
+      .children('a')
+      .each((i, v) => {
+        const path = $(v).attr("href");
+        if(!path.includes('#')) {
+          urlList.push(url + path);
+        }
+      });
+    return urlList;
+  }
+}
 module.exports = {
   javaScriptCourse,
   es6Course,
@@ -134,5 +159,6 @@ module.exports = {
   fe9ReactCourse,
   reactJsBook,
   typeScriptCourse,
-  nodeJsCourse
+  nodeJsCourse,
+  interviewReview
 };
