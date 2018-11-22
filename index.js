@@ -12,7 +12,8 @@ const request = require("./util"),
     reactJsBook,
     typeScriptCourse,
     nodeJsCourse,
-    interviewReview
+    interviewReview,
+    computerGeneral
   } = require("./config");
 
 const getHtml = url => {
@@ -139,12 +140,25 @@ const getJsReview = () => {
 
   getHtml(pageApi).then(res => {
     const urlList = getUrlList(res, wrapEle, url);
-    console.log('urlList',urlList)
     percollate.configure();
     percollate.pdf(urlList, {
       output: name,
       css,
-      usePup
+    });
+  });
+}
+
+const getComputerGeneral = () => {
+  const { url, name, wrapEle, getUrlList, css,usePup,pageApi } = computerGeneral;
+
+  getHtml(pageApi).then(res => {
+    const urlList = getUrlList(res, wrapEle, url);
+    console.log('urlList',urlList);
+    
+    percollate.configure();
+    percollate.pdf(urlList, {
+      output: name,
+      css,
     });
   });
 }
@@ -156,9 +170,10 @@ const getPdf = {
   3:getReactJsBook,       // ReactJs小书
   4:getTypeScriptCourse,  // TypeScript入门教程
   5:getNodeJsCourse,      // 七天学会NodeJs
-  6:getJsReview           // 前端JS面试知识点总结
+  6:getJsReview,          // 前端JS面试知识点总结
+  7:getComputerGeneral    // 计算机通识
 }
 
 // 获取pdf
-getPdf[6]()
+getPdf[7]()
  

@@ -115,7 +115,6 @@ const nodeJsCourse = {
   usePup: true,  
   getUrlList(body, ele, url) {
     let urlList = [];
-    console.log('body---',body);
     
     $(body)
       .find(ele)
@@ -135,10 +134,8 @@ const interviewReview = {
   name: "前端面试复习知识点集合.pdf",  
   wrapEle: ".sidebar-group-items li",  
   css: baseOpt.cssIReader,
-  usePup: true,  
   getUrlList(body, ele, url) {
     let urlList = [];
-    console.log('body---',body);
     
     $(body)
       .find(ele)
@@ -152,6 +149,30 @@ const interviewReview = {
     return urlList;
   }
 }
+
+// 计算机通识
+const computerGeneral = {
+  url: "https://yuchengkai.cn",
+  pageApi: "https://yuchengkai.cn/docs/zh/cs/",
+  name: "计算机通识.pdf",  
+  wrapEle: ".sidebar-group-items li",  
+  css: baseOpt.cssIReader,
+  getUrlList(body, ele, url) {
+    let urlList = [];
+    
+    $(body)
+      .find(ele)
+      .children('a')
+      .each((i, v) => {
+        const path = $(v).attr("href");
+        if(!path.includes('#')) {
+          urlList.push(url + path);
+        }
+      });
+    return urlList;
+  }
+} 
+
 module.exports = {
   javaScriptCourse,
   es6Course,
@@ -160,5 +181,6 @@ module.exports = {
   reactJsBook,
   typeScriptCourse,
   nodeJsCourse,
-  interviewReview
+  interviewReview,
+  computerGeneral
 };
