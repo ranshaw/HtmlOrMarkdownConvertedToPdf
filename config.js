@@ -173,6 +173,13 @@ const computerGeneral = {
   }
 } 
 
+// 各种常见布局实现和案例分析
+const  layoutExample = {
+  url: "https://juejin.im/post/5aa252ac518825558001d5de",
+  name: "各种常见布局实现和案例分析.pdf",  
+  css: baseOpt.cssIReader,
+}
+
 module.exports = {
   javaScriptCourse,
   es6Course,
@@ -182,5 +189,6 @@ module.exports = {
   typeScriptCourse,
   nodeJsCourse,
   interviewReview,
-  computerGeneral
+  computerGeneral,
+  layoutExample
 };

@@ -13,7 +13,8 @@ const request = require("./util"),
     typeScriptCourse,
     nodeJsCourse,
     interviewReview,
-    computerGeneral
+    computerGeneral,
+    layoutExample
   } = require("./config");
 
 const getHtml = url => {
@@ -163,6 +164,15 @@ const getComputerGeneral = () => {
   });
 }
 
+const getLayoutExample = () => {
+  const { url, name, css } = layoutExample;
+  percollate.configure();
+  percollate.pdf([url], {
+    output: name,
+    css,
+  });
+}
+
 const getPdf = {
   0:getJSCourse,          // 阮一峰JS教程
   1:getEs6Course,         // 阮一峰ES6教程
@@ -171,9 +181,10 @@ const getPdf = {
   4:getTypeScriptCourse,  // TypeScript入门教程
   5:getNodeJsCourse,      // 七天学会NodeJs
   6:getJsReview,          // 前端JS面试知识点总结
-  7:getComputerGeneral    // 计算机通识
+  7:getComputerGeneral,   // 计算机通识
+  8:getLayoutExample
 }
 
 // 获取pdf
-getPdf[7]()
+getPdf[8]()
  
