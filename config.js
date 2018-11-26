@@ -180,6 +180,31 @@ const  layoutExample = {
   css: baseOpt.cssIReader,
 }
 
+// 廖雪峰JavaScript全栈教程
+const  liaoXueFengJs = {
+  url: "https://www.liaoxuefeng.com",
+  pageApi: "https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000",
+  name: "廖雪峰JavaScript全栈教程.pdf",  
+  wrapEle: "#001434446689867b27157e896e74d51a89c25cc8b43bdb3000 a",  
+  usePup: true,
+  css: baseOpt.cssIReader,
+  getUrlList(body, ele, url) {
+    let urlList = [];
+    $(body)
+      .find(ele)
+      .each((i, v) => {
+        const path = $(v).attr("href");
+        if(path && 
+          path.includes('wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000') && 
+          !urlList.includes(url + path)
+          ) {
+          urlList.push(url + path);
+        }
+      });
+    return urlList;
+  }
+}
+
 module.exports = {
   javaScriptCourse,
   es6Course,
@@ -190,5 +215,6 @@ module.exports = {
   nodeJsCourse,
   interviewReview,
   computerGeneral,
-  layoutExample
+  layoutExample,
+  liaoXueFengJs
 };

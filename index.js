@@ -14,10 +14,14 @@ const request = require("./util"),
     nodeJsCourse,
     interviewReview,
     computerGeneral,
-    layoutExample
+    layoutExample,
+    liaoXueFengJs
   } = require("./config");
 
-const getHtml = url => {
+const getHtml = (url,usePup) => {
+  if(usePup) {
+    return request.parseBodyPup(url)
+  }
   return request.parseBody(url);
 };
 const getJSCourse = () => {
@@ -154,7 +158,6 @@ const getComputerGeneral = () => {
 
   getHtml(pageApi).then(res => {
     const urlList = getUrlList(res, wrapEle, url);
-    console.log('urlList',urlList);
     
     percollate.configure();
     percollate.pdf(urlList, {
@@ -173,6 +176,21 @@ const getLayoutExample = () => {
   });
 }
 
+const getLiaoXueFengJs = () => {
+  const { url, name, wrapEle, getUrlList, css,usePup,pageApi } = liaoXueFengJs;
+
+  getHtml(pageApi,true).then(res => {
+    const urlList = getUrlList(res, wrapEle, url);
+    console.log('urlList',urlList)
+    percollate.configure();
+    percollate.pdf(urlList, {
+      output: name,
+      css,
+      usePup
+    });
+  });
+}
+
 const getPdf = {
   0:getJSCourse,          // 阮一峰JS教程
   1:getEs6Course,         // 阮一峰ES6教程
@@ -182,9 +200,10 @@ const getPdf = {
   5:getNodeJsCourse,      // 七天学会NodeJs
   6:getJsReview,          // 前端JS面试知识点总结
   7:getComputerGeneral,   // 计算机通识
-  8:getLayoutExample
+  8:getLayoutExample,     // 各种常见布局实现和案例分析
+  9:getLiaoXueFengJs,     // 廖雪峰JavaScript全栈教程
 }
 
 // 获取pdf
-getPdf[8]()
+getPdf[9]()
  
