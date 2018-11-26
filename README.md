@@ -1,7 +1,7 @@
 ### 项目介绍
 本项目旨在收集和整理网络上优秀和免费的教程，将其转为PDF文件，以便在阅读器上阅读，项目中提供的PDF文件为A6大小，适合在IReader T6中阅读，如果不能适配你的阅读器，请Fork源代码，自行修改导出的参数。如果大家有优秀的课程想要分享，欢迎在Issues中提出，我会及时更新出PDF文件。
 ### PDF文件
-在项目目录pdfs下,进入书的详情页，点击右侧的**Download**按钮即可下载
+在项目目录pdfs下,进入书的详情页，点击右侧的**Download**按钮即可下载
 ##### JavaScript相关教程
 * [阮一峰JavaScript教程](https://github.com/ranshaw/HtmlOrMarkdownConvertedToPdf/blob/master/pdfs/%E9%98%AE%E4%B8%80%E5%B3%B0JavaScript%E6%95%99%E7%A8%8B.pdf)
 * [阮一峰ES6教程](https://github.com/ranshaw/HtmlOrMarkdownConvertedToPdf/blob/master/pdfs/%E9%98%AE%E4%B8%80%E5%B3%B0ECMAScript6%E5%85%A5%E9%97%A8.pdf)
