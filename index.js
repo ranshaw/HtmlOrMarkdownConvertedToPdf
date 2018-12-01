@@ -1,8 +1,8 @@
-const request = require("./util"),
+const utils = require("./util"),
   percollate = require("percollate"),
   markdownpdf = require("markdown-pdf"),
-  puppeteer = require("puppeteer"),
   merge = require("easy-pdf-merge"),
+  schedule = require('node-schedule'),
   fs = require("fs"),
   {
     javaScriptCourse,
@@ -20,9 +20,9 @@ const request = require("./util"),
 
 const getHtml = (url,usePup) => {
   if(usePup) {
-    return request.parseBodyPup(url)
+    return utils.parseBodyPup(url)
   }
-  return request.parseBody(url);
+  return utils.parseBody(url);
 };
 const getJSCourse = () => {
   const { url, name, wrapEle, getUrlList, css } = javaScriptCourse;
@@ -176,18 +176,30 @@ const getLayoutExample = () => {
   });
 }
 
-const getLiaoXueFengJs = () => {
+const getLiaoXueFengJs =  () => {
   const { url, name, wrapEle, getUrlList, css,usePup,pageApi } = liaoXueFengJs;
 
   getHtml(pageApi,true).then(res => {
-    const urlList = getUrlList(res, wrapEle, url);
-    console.log('urlList',urlList)
-    percollate.configure();
-    percollate.pdf(urlList, {
-      output: name,
-      css,
-      usePup
+    const urlList = getUrlList(res, wrapEle, url)
+    console.log('urlList---',urlList.length)
+    const arr = utils.toDoubleDimensionalArray(urlList,5)
+    console.log('arr2---',arr.length)
+    let i = 0
+    let rule = new schedule.RecurrenceRule()
+    rule.minute = [15,30,45,60]
+    const task = schedule.scheduleJob(rule, function(){
+      percollate.configure();
+      percollate.pdf(arr[i], {
+        output: 0 + name,
+        css,
+        usePup
+      });
+      if(i === arr.length) {
+        task.cancel()
+      }
+      i++
     });
+
   });
 }
 
@@ -206,4 +218,3 @@ const getPdf = {
 
 // 获取pdf
 getPdf[9]()
- 
