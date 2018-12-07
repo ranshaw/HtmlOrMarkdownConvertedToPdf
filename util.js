@@ -1,5 +1,7 @@
-const request = require("request");
+const request = require("request")
 const pup = require("puppeteer")
+const merge = require("easy-pdf-merge")
+const fs = require('fs')
 
 const parseBody = (url) => {
   return new Promise((resolve, reject) => {
@@ -42,9 +44,46 @@ const toDoubleDimensionalArray = (arr,count) => {
     return doubleDimensionalArray
 }
 
+const mergePdfs = (sum,name) => {
+  const fileName = []
+  let i = 0
+  while(i < sum) {
+    fileName.push(i + name)
+    i++
+  }
+  console.log('将合并的文件列表---',fileName);
+  merge(fileName, name ,function(err){
+
+    if(err)
+    return console.log(err);
+
+    console.log('合并文件成功!---');
+
+  });
+}
+
+const getUnsavedIndex = (count) => {
+  let files = fs.readdirSync('./')
+  const pdfFiles = files.filter((v) => {
+    return v.includes('.pdf')
+  }).map((v) => {
+    return Number(v.match(/^\d{1,2}/)[0])
+  })
+  console.log('pdfFiles---',pdfFiles);
+  const unsavedFiles = []
+  for(let i = 0; i < count;i++) {
+    if(!pdfFiles.includes(i)) {
+      unsavedFiles.push(i)
+    }
+  }
+  return unsavedFiles
+}
+
 module.exports = {
   parseBody,
   parseBodyPup,
   delay,
-  toDoubleDimensionalArray
+  toDoubleDimensionalArray,
+  mergePdfs,
+  getUnsavedIndex
 };

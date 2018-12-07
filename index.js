@@ -1,7 +1,6 @@
 const utils = require("./util"),
   percollate = require("percollate"),
   markdownpdf = require("markdown-pdf"),
-  merge = require("easy-pdf-merge"),
   schedule = require('node-schedule'),
   fs = require("fs"),
   {
@@ -183,21 +182,39 @@ const getLiaoXueFengJs =  () => {
     const urlList = getUrlList(res, wrapEle, url)
     console.log('urlList---',urlList.length)
     const arr = utils.toDoubleDimensionalArray(urlList,5)
-    console.log('arr2---',arr.length)
+    console.log('---',arr.length)
+
     let i = 0
     let rule = new schedule.RecurrenceRule()
-    rule.minute = [15,30,45,60]
+    let unsavedFiles = []
+    rule.minute = [15,30,45,59]
     const task = schedule.scheduleJob(rule, function(){
+      i++
+      console.log('i---',i)
       percollate.configure();
-      percollate.pdf(arr[i], {
-        output: 0 + name,
+      percollate.pdf(arr[i-1], {
+        output: (i-1) + name,
         css,
         usePup
       });
       if(i === arr.length) {
+        i = 0
+        // 获得未生成pdf文件的index值
+        unsavedFiles = utils.getUnsavedIndex(arr.length)
+        return
+      }
+      // 第一次生成失败的再次生成
+      if(unsavedFiles.length) {
+        percollate.configure();
+        percollate.pdf(arr[unsavedFiles[i-1]], {
+          output: (unsavedFiles[i-1]) + name,
+          css,
+          usePup
+        });
+      } else {
+        utils.mergePdfs(arr.length,'廖雪峰JavaScript全栈教程.pdf')
         task.cancel()
       }
-      i++
     });
 
   });
@@ -218,3 +235,5 @@ const getPdf = {
 
 // 获取pdf
 getPdf[9]()
+
+
