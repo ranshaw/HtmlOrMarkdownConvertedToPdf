@@ -7,6 +7,7 @@
 * [阮一峰JavaScript教程](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
 * [阮一峰ES6教程](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
 * [TypeScript入门教程](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
+* [廖雪峰JavaScript教程](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
 
 ##### ReactJs
 * [ReactJs小书](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
