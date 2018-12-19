@@ -6,54 +6,56 @@
 本项目导出的PDF文件都放在百度网盘中，下面为分享的链接
 > **链接:https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A  密码:f177**
 #### JavaScript
-网盘位置：PDFS > JavaScript
-* 阮一峰JavaScript教程.pdf
-* 阮一峰ES6教程.pdf
-* TypeScript入门教程.pdf
-* 廖雪峰JavaScript教程.pdf
-* 第三方JavaScript编程.epub
-* 精通D3.js：交互式数据可视化高级编程.epub
-* JavaScript框架设计.epub
-* JavaScript高级程序设计（第3版） - 泽卡斯.mobi
-* JavaScript语言精粹(修订版).epub
-* 超实用的JavaScript代码段 (代码逆袭).epub
-* JavaScript权威指南(原书第6版).mobi
-* JavaScript设计模式与开发实践（图灵原创）.epub
-* 超实用的jQuery代码段.epub
-* JavaScript函数式编程
-* 学习JavaScript数据结构与算法（第2版）.epub
-* AngularJS实战 - 陶国荣 著.mobi
-* 揭秘Angular 2.pdf
+:globe_with_meridians: 网盘位置：PDFS > JavaScript
+* :tada: 阮一峰JavaScript教程.pdf
+* :tada: 阮一峰ES6教程.pdf
+* :tada: TypeScript入门教程.pdf
+* :tada: 廖雪峰JavaScript教程.pdf
+* :tada: 第三方JavaScript编程.epub
+* :tada: 精通D3.js：交互式数据可视化高级编程.epub
+* :tada: JavaScript框架设计.epub
+* :tada: JavaScript高级程序设计（第3版） - 泽卡斯.mobi
+* :tada: JavaScript语言精粹(修订版).epub
+* :tada: 超实用的JavaScript代码段 (代码逆袭).epub
+* :tada: JavaScript权威指南(原书第6版).mobi
+* :tada: JavaScript设计模式与开发实践（图灵原创）.epub
+* :tada: 超实用的jQuery代码段.epub
+* :tada: JavaScript函数式编程
+* :tada: 学习JavaScript数据结构与算法（第2版）.epub
+* :tada: AngularJS实战 - 陶国荣 著.mobi
+* :tada: 揭秘Angular 2.pdf
 
 #### HTML5+CSS
-网盘位置：PDFS > H5+Css3
-* HTML5与CSS3基础教程(第8版)(图灵程序设计丛书).epub
-* H5+移动营销设计宝典.epub
-* 现代前端技术解析.epub
-* HTML5权威指南.pdf
-* 《HTML5 canvas开发详解(第2版)》富尔顿 等（作者）epub
-* 《CSS高效开发实战：CSS 3、LESS、SASS、Bootstrap、Foundation》谢郁（作者）mobi
-* CSS设计指南 (第3版).epub
-* HTML5实战.epub
-* CSS世界（异步图书）张鑫旭.epub
+:globe_with_meridians: 网盘位置：PDFS > H5+Css3
+* :tada: HTML5与CSS3基础教程(第8版)(图灵程序设计丛书).epub
+* :tada: H5+移动营销设计宝典.epub
+* :tada: 现代前端技术解析.epub
+* :tada: HTML5权威指南.pdf
+* :tada: 《HTML5 canvas开发详解(第2版)》富尔顿 等（作者）epub
+* :tada: 《CSS高效开发实战：CSS 3、LESS、SASS、Bootstrap、Foundation》谢郁（作者）mobi
+* :tada: CSS设计指南 (第3版).epub
+* :tada: HTML5实战.epub
+* :tada: CSS世界（异步图书）张鑫旭.epub
 
 
 #### ReactJs
-*  ReactJs小书
-*  九部知识库之ReactJS精选文章
+:globe_with_meridians: 网盘位置：PDFS > ReactJs
+* :tada: ReactJs小书
+* :tada: 九部知识库之ReactJS精选文章
 
 #### NodeJS
-网盘位置：PDFS > NodeJs
-* 七天学会NodeJS.pdf
-* Node.js权威指南(实战).epub
-* Node即学即用(图灵程序设计丛书).epub
-* 超实用的Node.js代码段(代码逆袭).epub
+:globe_with_meridians: 网盘位置：PDFS > NodeJs
+* :tada: 七天学会NodeJS.pdf
+* :tada: Node.js权威指南(实战).epub
+* :tada: Node即学即用(图灵程序设计丛书).epub
+* :tada: 超实用的Node.js代码段(代码逆袭).epub
 
 
 #### 面试复习
-* 前端面试复习知识点集合
-* 计算机通识
-* 各种常见布局实现和案例分析
+:globe_with_meridians: 网盘位置：PDFS > 面试复习
+* :tada: 前端面试复习知识点集合
+* :tada: 计算机通识
+* :tada: 各种常见布局实现和案例分析
 
 #### 其他
 ### 添加方法
