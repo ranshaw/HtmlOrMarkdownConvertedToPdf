@@ -14,8 +14,11 @@ const utils = require("./util"),
     interviewReview,
     computerGeneral,
     layoutExample,
-    liaoXueFengJs
+    liaoXueFengJs,
+    frontEndForward,
+    manyBooks
   } = require("./config");
+  const request = require("request")
 
 const getHtml = (url,usePup) => {
   if(usePup) {
@@ -220,6 +223,23 @@ const getLiaoXueFengJs =  () => {
   });
 }
 
+const getFrontEndForward = () => {
+
+}
+
+const getManyBooks = () => {
+  const { url, wrapEle, getUrlList,  } = manyBooks;
+  getHtml(url).then(res => {
+    const {urlList,titleList} = getUrlList(res, wrapEle, url);
+    console.log("urlList", urlList);
+    fs.writeFile('./url.txt',JSON.stringify(urlList),(err) => {
+      if(!err) {
+        console.log('保存url成功！')
+      }
+    })
+  });
+}
+
 const getPdf = {
   0:getJSCourse,          // 阮一峰JS教程
   1:getEs6Course,         // 阮一峰ES6教程
@@ -231,9 +251,11 @@ const getPdf = {
   7:getComputerGeneral,   // 计算机通识
   8:getLayoutExample,     // 各种常见布局实现和案例分析
   9:getLiaoXueFengJs,     // 廖雪峰JavaScript全栈教程
+  10:getFrontEndForward,  // 前端基础进阶--这波能反杀
+  11:getManyBooks,        // 获取大量计算机PDF书籍
 }
 
 // 获取pdf
-getPdf[9]()
+getPdf[11]()
 
 

@@ -205,6 +205,56 @@ const  liaoXueFengJs = {
   }
 }
 
+// 前端基础进阶--这波能反杀
+const frontEndForward = {
+  url: "https://www.jianshu.com",
+  pageApi1: "https://www.jianshu.com/u/10ae59f49b13?order_by=shared_at&page=5",
+  pageApi2: "https://www.jianshu.com/u/10ae59f49b13?order_by=shared_at&page=5",
+  name: "前端基础进阶-这波能反杀.pdf",  
+  wrapEle: ".sidebar-group-items li",  
+  css: baseOpt.cssIReader,
+  getUrlList(body, ele, url) {
+    let urlList = [];
+    
+    $(body)
+      .find(ele)
+      .children('a')
+      .each((i, v) => {
+        const path = $(v).attr("href");
+        if(!path.includes('#')) {
+          urlList.push(url + path);
+        }
+      });
+    return urlList;
+  }
+} 
+
+// 获取大量计算机PDF书籍
+const manyBooks = {
+  url: "https://www.yuque.com/winforlife/vgzph9/",
+  wrapEle: ".typo-catalog-detail",
+  titleList: [],
+  getUrlList(body, ele, url) {
+    let urlList = [];
+    let titleList = []
+    const reg = /(?<=decodeURIComponent\()\S+(?=\)\))/g;
+    const dataStr = decodeURIComponent(body.match(reg)[0]);
+    const data = dataStr.slice(1, dataStr.length - 1);
+    const dataJson = JSON.parse(data);
+
+    dataJson.book.toc.forEach((v, i) => {
+      if (v.type === "DOC" && v.title.includes('.')) {
+        titleList.push(v.title)
+        urlList.push(`http://17250589.ch3.data.tv002.com/down/8f703acbeb78099b2a8f39e90d10a305-101741980/${v.title}?cts=f-D180A169A219A98Fe4b25&ctp=180A169A219A98&ctt=1544744328&limit=1&spd=0&ctk=56140b7f0b52158df177bdff485bf162&chk=8f703acbeb78099b2a8f39e90d10a305-101741980&mtd=1`);
+      }
+    });
+    return {
+      urlList,
+      titleList
+    };
+  }
+}
+
 module.exports = {
   javaScriptCourse,
   es6Course,
@@ -216,5 +266,7 @@ module.exports = {
   interviewReview,
   computerGeneral,
   layoutExample,
-  liaoXueFengJs
+  liaoXueFengJs,
+  frontEndForward,
+  manyBooks
 };
