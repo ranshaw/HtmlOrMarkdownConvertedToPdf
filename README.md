@@ -5,7 +5,7 @@
 ### PDF文件
 本项目导出的PDF文件都放在百度网盘中，下面为分享的链接
 > **链接:https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A  密码:f177**
-##### JavaScript
+#### JavaScript
 网盘位置：PDFS > JavaScript
 * 阮一峰JavaScript教程.pdf
 * 阮一峰ES6教程.pdf
@@ -25,7 +25,7 @@
 * AngularJS实战 - 陶国荣 著.mobi
 * 揭秘Angular 2.pdf
 
-##### HTML5+CSS
+#### HTML5+CSS
 网盘位置：PDFS > H5+Css3
 * HTML5与CSS3基础教程(第8版)(图灵程序设计丛书).epub
 * H5+移动营销设计宝典.epub
@@ -38,9 +38,9 @@
 * CSS世界（异步图书）张鑫旭.epub
 
 
-##### ReactJs
-* [ReactJs小书](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
-* [九部知识库之ReactJS精选文章](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
+#### ReactJs
+*  ReactJs小书
+*  九部知识库之ReactJS精选文章
 
 #### NodeJS
 网盘位置：PDFS > NodeJs
@@ -50,12 +50,12 @@
 * 超实用的Node.js代码段(代码逆袭).epub
 
 
-##### 面试复习
-* [前端面试复习知识点集合](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
-* [计算机通识](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
-* [各种常见布局实现和案例分析](https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A)
+#### 面试复习
+* 前端面试复习知识点集合
+* 计算机通识
+* 各种常见布局实现和案例分析
 
-##### 其他
+#### 其他
 ### 添加方法
 更改node_modules中percollate里面index.js中的cleanup方法，将
 ```
