@@ -2,15 +2,17 @@
 本项目旨在收集和整理网络上优秀和免费的教程，将其转为PDF文件，以便在阅读器上阅读，项目中提供的PDF文件为A6大小，适合在IReader T6中阅读，如果不能适配你的阅读器，请Fork源代码，自行修改导出的参数。如果大家有优秀的课程想要分享，欢迎在Issues中提出，我会及时更新出PDF文件。
 
 新增大量.mobi和.epub格式电子书，内容收集于网络，如有侵权，请联系我删除。
+* :tada: 标记的为收集于网络
+* :hammer: 标记的为自己生成
 ### PDF文件
 本项目导出的PDF文件都放在百度网盘中，下面为分享的链接
 > **链接:https://pan.baidu.com/s/1LykoDdRxJvd36ZJcTf709A  密码:f177**
 #### JavaScript
 :globe_with_meridians: 网盘位置：PDFS > JavaScript
-* :tada: 阮一峰JavaScript教程.pdf
-* :tada: 阮一峰ES6教程.pdf
-* :tada: TypeScript入门教程.pdf
-* :tada: 廖雪峰JavaScript教程.pdf
+* :hammer: 阮一峰JavaScript教程.pdf
+* :hammer: 阮一峰ES6教程.pdf
+* :hammer: TypeScript入门教程.pdf
+* :hammer: 廖雪峰JavaScript教程.pdf
 * :tada: 第三方JavaScript编程.epub
 * :tada: 精通D3.js：交互式数据可视化高级编程.epub
 * :tada: JavaScript框架设计.epub
@@ -40,12 +42,12 @@
 
 #### ReactJs
 :globe_with_meridians: 网盘位置：PDFS > ReactJs
-* :tada: ReactJs小书
-* :tada: 九部知识库之ReactJS精选文章
+* :hammer: ReactJs小书
+* :hammer: 九部知识库之ReactJS精选文章
 
 #### NodeJS
 :globe_with_meridians: 网盘位置：PDFS > NodeJs
-* :tada: 七天学会NodeJS.pdf
+* :hammer: 七天学会NodeJS.pdf
 * :tada: Node.js权威指南(实战).epub
 * :tada: Node即学即用(图灵程序设计丛书).epub
 * :tada: 超实用的Node.js代码段(代码逆袭).epub
@@ -53,9 +55,9 @@
 
 #### 面试复习
 :globe_with_meridians: 网盘位置：PDFS > 面试复习
-* :tada: 前端面试复习知识点集合
-* :tada: 计算机通识
-* :tada: 各种常见布局实现和案例分析
+* :hammer: 前端面试复习知识点集合
+* :hammer: 计算机通识
+* :hammer: 各种常见布局实现和案例分析
 
 #### 其他
 ### 添加方法
@@ -104,4 +106,6 @@ let content
 启动项目
  > node index
 
- 
+### PS
+点击右上角的Watch，会收到项目的最新动态，如果通过本项目生成的电子书不能适配你的阅读器，请Fork代码，自行修改配置然后从新生成，
+项目会持续更新，喜欢的请Star！
