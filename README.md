@@ -53,11 +53,26 @@
 * :tada: 超实用的Node.js代码段(代码逆袭).epub
 
 
-#### 面试复习
+#### 前端面试复习
 :globe_with_meridians: 网盘位置：PDFS > 面试复习
 * :hammer: 前端面试复习知识点集合
 * :hammer: 计算机通识
 * :hammer: 各种常见布局实现和案例分析
+
+#### 计算机基础理论与原理
+:globe_with_meridians: 网盘位置：PDFS > 计算机基础理论与原理
+* :tada: 编译原理.pdf
+* :tada: 计算机科学概论（原书第3版）.pdf
+* :tada: 离散数学及其应用 原书第6版（美）罗森 第六版中文版.pdf
+* :tada: 《计算机图形学》.pdf
+* :tada: 《并行程序设计 （第二版）》.pdf
+* :tada: 《操作系统概念：JAVA实现》.pdf
+* :tada:  [现代编译原理C语言描述].(美国)Andrew.W.Appel.清晰版.pdf
+* :tada:  高级编译器设计与实现(Steven.S.Muchnick).(中文版).pdf
+* :tada:  深入理解计算机系统（原书第三版）
+* :tada:  [计算机网络第五版]计算机网络第五版.pdf
+* :tada:  计算机网络[第7版].pdf
+
 
 #### 其他
 ### 添加方法
