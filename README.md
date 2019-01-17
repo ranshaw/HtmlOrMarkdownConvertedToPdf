@@ -25,7 +25,8 @@
 * :tada: JavaScript函数式编程
 * :tada: 学习JavaScript数据结构与算法（第2版）.epub
 * :tada: AngularJS实战 - 陶国荣 著.mobi
-* :tada: 揭秘Angular 2.pdf
+* :tada: 揭秘Angular 2.pdf  
+* :tada: TypeScript Deep Dive.epub
 
 #### HTML5+CSS
 :globe_with_meridians: 网盘位置：PDFS > H5+Css3
@@ -72,6 +73,22 @@
 * :tada:  深入理解计算机系统（原书第三版）
 * :tada:  [计算机网络第五版]计算机网络第五版.pdf
 * :tada:  计算机网络[第7版].pdf
+
+#### 数据库相关
+:globe_with_meridians: 网盘位置：PDFS > 数据库相关
+
+* :tada: MySQL.Cookbook(第2版)].(美)迪布瓦.中文版.扫描版.pdf
+* :tada: [Oracle.PL.SQL程序设计_第五版_上册].Steven.Feuerstein&Bill.Pribyl.扫描版.pdf
+* :tada: 高性能MySQL(第3版).epub
+* :tada: 高性能MySQL第2版中文版.施瓦茨.扫描版.pdf
+* :tada: 数据库系统概念_中文第六版.pdf.crdownload
+* :tada: 数据库系统实现(第二版).pdf
+* :tada: MySQL技术内幕：InnoDB存储引擎(第2版) (数据库技术丛书) - 姜承尧.mobi
+* :tada: MySQL技术内幕（第4版） - 杜波依斯.mobi
+* :tada: MySQL性能调优与架构设计 - 简朝阳.mobi
+* :tada: PL_SQL_Oracle基础教程.pdf
+* :tada: SQL Server从入门到精通.pdf
+* :tada: SQL经典实例_高清_带书签.pdf
 
 
 #### 其他
