@@ -6,7 +6,7 @@
 * :hammer: 标记的为自己生成
 ### PDF文件
 本项目导出的PDF文件都放在百度网盘中，下面为分享的链接
-> **链接: https://pan.baidu.com/s/1HAuY2VNp0hZPTUgCcH2A5g 提取码: 64he **
+>  链接: https://pan.baidu.com/s/1HAuY2VNp0hZPTUgCcH2A5g 提取码: 64he 
 #### JavaScript
 :globe_with_meridians: 网盘位置：PDFS > JavaScript
 * :hammer: 阮一峰JavaScript教程.pdf
